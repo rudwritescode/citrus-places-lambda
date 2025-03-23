@@ -1,0 +1,32 @@
+{
+  "name": "citrus-places-lambda",
+  "version": "1.0.0",
+  "description": "Lambda to search and fetch location",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "author": "Citrus",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.147",
+    "dotenv": "^16.4.7",
+    "husky": "^8.0.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.3"
+  },
+  "dependencies": {
+    "axios": "^1.8.4"
+  },
+  "husky": {
+    "hooks": {
+        "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,jsx}": [
+        "npx prettier --config .prettierrc --write"
+    ]
+  }
+}
